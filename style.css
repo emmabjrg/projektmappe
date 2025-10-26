@@ -129,10 +129,10 @@ nav {
   align-items: center;
   background: #f4f2ee8e;
   padding: 1rem 2rem;
-  position: fixed; /* Add this */
-  top: 0; /* Add this */
-  left: 0; /* Add this */
-  right: 0; /* Add this */
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
   z-index: 1000;
 }
 
