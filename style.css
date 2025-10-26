@@ -49,24 +49,24 @@ h1 {
 gap: 3rem;}
 
 
-  #links button {
-    color: #922B26;
-text-transform: lowercase;
-font-family: "Anonymous Pro", monospace;
-background: none;
-border-color: #922B26;
-border-style:solid;
-border-width: 1px;
-padding:10px;
-width: 12rem;}
+#links button {
+  color: #922B26;
+  text-transform: lowercase;
+  font-family: "Anonymous Pro", monospace;
+  background: none;
+  border-color: #922B26;
+  border-style:solid;
+  border-width: 1px;
+  padding:10px;
+  width: 12rem;
+}
 
 #links button a {text-decoration: none;
   color: #922B26;}
 
 #links button:hover {
   background-color: #922B26; cursor:pointer; transform: scale(1.05); transition: all 0.3s ease
-  ;}
-  #links button:hover a {color: #BFD7E3;}
+  ;color: #BFD7E3;}
 
 span {
 
@@ -144,15 +144,31 @@ nav ul {
 }
 
 nav a {
+  display: block;
   text-decoration: none;
   color: #922B26;
 }
+
+.listeform {
+  text-align: center;
+  font-style: italic;
+  line-height: 0.4rem;
+}
+
 
 nav a:hover {
   text-decoration: underline; 
   font-weight: bolder; 
   transition: 0.3s ease;
 ;}
+
+#tekstkomp {
+  margin-bottom: 2rem;
+}
+
+#tekstdigi {
+  margin-top: 3rem;
+}
 
 section {
   scroll-margin-top: 60px;
