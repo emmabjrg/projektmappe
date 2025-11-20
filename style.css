@@ -1,3 +1,4 @@
+/* ------------------ TYPOGRAFI ------------------ */
 .anonymous-pro-regular {
   font-family: "Anonymous Pro", monospace;
   font-weight: 400;
@@ -43,11 +44,19 @@ h1 {
   line-height: 4vw;
 }
 
+h2 {
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* ------------------ LINKS / KNAPPER ------------------ */
 #links {
   display: flex;
   justify-content:center;
-gap: 3rem;}
-
+  gap: 3rem;
+}
 
 #links button {
   color: #922B26;
@@ -61,19 +70,26 @@ gap: 3rem;}
   width: 12rem;
 }
 
-#links button a {text-decoration: none;
-  color: #922B26;}
-
-#links button:hover {
-  background-color: #922B26; cursor:pointer; transform: scale(1.05); transition: all 0.3s ease
-  ;color: #BFD7E3;}
-
-span {
-
-    font-size: 10vw;
-    width: auto;
+#links button a {
+  text-decoration: none;
+  color: #922B26;
 }
 
+#links button:hover {
+  background-color: #922B26; 
+  cursor:pointer; 
+  transform: scale(1.05); 
+  transition: all 0.3s ease; 
+  color: #BFD7E3;
+}
+
+/* ------------------ SPAN ------------------ */
+span {
+  font-size: 10vw;
+  width: auto;
+}
+
+/* ------------------ BLOB BAGGRUND ------------------ */
 .blob-bg {
   position: absolute;
   top: 20rem;
@@ -83,9 +99,8 @@ span {
   z-index: -1;
 }
 
-
 .blob-bund {
- position: relative;
+  position: relative;
   width: 70%;
   overflow: hidden;
   line-height: 0;
@@ -95,34 +110,28 @@ span {
   z-index: -1;
 }
 
+/* ------------------ SEKTIONER ------------------ */
 #om-mig {
-    scroll-margin-top: 60px;
-    margin-top: 8rem;
+  scroll-margin-top: 60px;
+  margin-top: 8rem;
   position: relative;
   overflow: hidden;
-width: 66vw;
-    max-width: 500px;}
-
-#favicon {
-    width: 2rem;
+  width: 66vw;
+  max-width: 500px;
 }
 
-main { 
-    margin-top: 6rem;
-    padding: 3rem;
+#kompetencer {
+  width: 66vw;
+  max-width: 500px;
+  margin-top: 1rem;
 }
 
-h2 {
-    font-size: 2rem;
-    font-weight: normal;
-    text-align: center;
-    padding: 2rem;
+#kontakt {
+  scroll-margin-top: 60px;
+  margin-bottom: -20rem;
 }
-#landingpage {
-    text-align: center;
-    justify-content: center;
-    
-}
+
+/* ------------------ NAVIGATION ------------------ */
 nav {
   display: flex;
   justify-content: space-between;
@@ -136,105 +145,80 @@ nav {
   z-index: 1000;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-self: end;
-  gap: 3rem;
+#favicon {
+  width: 2rem;
 }
 
-nav a {
-  display: block;
+/* Nav links desktop */
+nav ul#nav-links {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul#nav-links li a {
   text-decoration: none;
   color: #922B26;
 }
 
-.listeform {
-  text-align: center;
-  font-style: italic;
-  line-height: 0.4rem;
-}
-
-
-nav a:hover {
-  text-decoration: underline; 
-  font-weight: bolder; 
+nav ul#nav-links li a:hover {
+  text-decoration: underline;
+  font-weight: bolder;
   transition: 0.3s ease;
-;}
-
-#tekstkomp {
-  margin-bottom: 2rem;
 }
 
-#tekstdigi {
-  margin-top: 3rem;
+/* ------------------ BURGER ICON ------------------ */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
 }
 
-section {
-  scroll-margin-top: 60px;
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #922B26;
+  transition: all 0.3s ease;
 }
 
-div img {
-  width: 15rem;
-  display: block;
-  margin: 0 auto 1rem;
-}   
-
-
-.grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 1fr 1fr 1fr;
-  ;
+.burger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
 }
-
-.uiux {
-    list-style: none;
-    display: flex;
-    font-style: italic;
-    justify-content: center;
-    gap: 9rem;
-}
-.comp {
-   line-height: 0;
-   text-align: center;
-   font-size: normal;
-}
-
-#kontakt {
-    scroll-margin-top: 60px;
-
-  margin-bottom: -20rem;
-}
-
-#kompetencer {width: 66vw;
-    max-width: 500px;
-margin-top: 2rem;}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #f4f2ee80;
-  font-size: 0.9rem;
-  ;
-}
-
-.fade-in {
+.burger.active div:nth-child(2) {
   opacity: 0;
-  transform: translateY(60px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.burger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ---------- MOBILVENLIGHED ---------- */
+/* ------------------ MOBILE NAV ------------------ */
 @media (max-width: 900px) {
+  nav ul#nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #f4f2ee8e;
+    width: 200px;
+    padding: 3rem;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  
+
+  nav ul#nav-links.show {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+  }
+
   h1 {
     font-size: 5vw;
     line-height: 2.4rem;
@@ -249,6 +233,8 @@ footer {
     width: 60%;
     max-width: 220px;
   }
+
+
 
   main {
     padding: 1.5rem;
@@ -266,17 +252,14 @@ footer {
     gap: 1.5rem;
   }
 
+  h3 {
+    line-height: 1rem;
+  }
+
   #links {
     flex-direction: row;
     gap: 1rem;
     margin-bottom: 4rem;
-  }
-
-  nav {
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 1;
-    padding-right:1;
   }
 
   #links button {
@@ -293,4 +276,86 @@ footer {
     width: 100%;
     margin-bottom: -1rem;
   }
+}
+
+/* ------------------ MAIN / LANDINGPAGE ------------------ */
+main {
+  margin-top: 6rem;
+  padding: 3rem;
+}
+
+#landingpage {
+  text-align: center;
+  justify-content: center;
+}
+
+div img {
+  width: 15rem;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+/* ------------------ LISTEFORM / TEKST ------------------ */
+.listeform {
+  justify-content: center;  
+  text-align: center;
+  font-style: italic;
+  line-height: 2rem;
+  list-style: none;
+}
+
+#tekstkomp {
+  margin-bottom: 2rem;
+}
+
+#tekstdigi {
+  margin-top: 3rem;
+}
+
+/* ------------------ GRID / KOMPETENCER ------------------ */
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.uiux {
+  list-style: none;
+  display: flex;
+  font-style: italic;
+  justify-content: center;
+  gap: 9rem;
+}
+
+.comp {
+  line-height: 0.1;
+  text-align: center;
+  font-size: normal;
+}
+/* ------------------ SECTION ------------------ */
+section {
+  scroll-margin-top: 60px;
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* ------------------ FOOTER ------------------ */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #f4f2ee80;
+  font-size: 0.9rem;
+}
+
+/* ------------------ FADE-IN ANIMATION ------------------ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
