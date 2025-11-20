@@ -83,6 +83,40 @@ h2 {
   color: #BFD7E3;
 }
 
+.projekter-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 90%;
+  margin: auto;
+}
+
+
+.projekt {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.projekt img {
+  width: 100%;
+}
+
+.projekt img {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  transition: all 0.3s ease;
+  filter: grayscale(100) brightness(0.9); 
+}
+
+.projekt img:hover {
+  filter: brightness(1);
+  transform: scale(1.05);
+}
+
+
+
 /* ------------------ SPAN ------------------ */
 span {
   font-size: 10vw;
@@ -194,6 +228,27 @@ nav ul#nav-links li a:hover {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
+.info {
+  font-style: italic;
+  text-align: center;
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+}
+
+.projekt button {
+  color: #922B26;
+  border: none;
+  border-radius: 10px;
+  background-color: #f4f2ee80;
+padding: 1rem;
+padding-top: 0.4rem;
+padding-bottom: 0.4rem;}
+
+
+.projekt button:hover {
+  background-color: #922B26;
+  color: #BFD7E3; }
+
 /* ------------------ MOBILE NAV ------------------ */
 @media (max-width: 900px) {
   nav ul#nav-links {
@@ -244,7 +299,7 @@ nav ul#nav-links li a:hover {
   #kompetencer {
     width: 90%;
     max-width: none;
-    margin-top: 4rem;
+    margin-top: rem;
   }
 
   .grid {
@@ -275,6 +330,11 @@ nav ul#nav-links li a:hover {
   .blob-bund {
     width: 100%;
     margin-bottom: -1rem;
+  }
+
+  .projekter-grid {
+    display: flex;
+    flex-direction: column;
   }
 }
 
